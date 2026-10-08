@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TratorCerto - Sugestor de Trator</title>
+    <!-- Ícones Font Awesome para redes sociais e logotipo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-tractor logo-icon"></i>
+                <div class="logo-text">
+                    <span class="brand-name">Trator<span class="brand-highlight">Certo</span></span>
+                    <span class="brand-tagline">ENCONTRE SEU TRATOR IDEAL</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#">Início</a>
+                <a href="#">Como Funciona</a>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Contato</a>
+                <a href="#">Entrar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal com Fundo da Lavoura -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="main-title">SUGESTOR DE TRATOR</h1>
+            
+            <!-- Card do Formulário -->
+            <div class="form-card">
+                <p class="form-title">COLOQUE A QUANTIDADE DE TERRA QUE VOCÊ PLANTA</p>
+                
+                <form id="tractor-form">
+                    <div class="input-group">
+                        <label for="hectares">Digite a área plantada (em hectares)</label>
+                        <input type="number" id="hectares" value="120" placeholder="ex: 120 ha">
+                        <span class="input-hint">(ex: 120 ha)</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="culture">Tipo de Cultura (opcional)</label>
+                        <div class="select-wrapper">
+                            <select id="culture">
+                                <option value="" disabled selected>e.g., Grãos</option>
+                                <option value="graos">Grãos</option>
+                                <option value="cana">Cana-de-açúcar</option>
+                                <option value="hortifruti">Hortifrúti</option>
+                                <option value="cafe">Café</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">OBTER SUGESTÃO DE TRATOR</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Resultados -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="results-title">SUGESTÕES DE TRATOR PARA <span id="display-hectares">120</span> HECTARES</h2>
+
+            <!-- Grid de Cards de Tratores -->
+            <div class="tractors-grid">
+                
+                <!-- Card 1: John Deere -->
+                <div class="tractor-card">
+                    <div class="brand-logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/John_Deere_logo.svg/320px-John_Deere_logo.svg.png" alt="John Deere" class="brand-logo">
+                    </div>
+                    <div class="tractor-image-container">
+                        <img src="https://images.unsplash.com/photo-1530267981375-f0de937f5f13?auto=format&fit=crop&w=400&q=80" alt="John Deere 6135E" class="tractor-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="model-title">6135E - 135 cv</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Potência</span>
+                                <span class="spec-value">615 cv</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Transmissão</span>
+                                <span class="spec-value">Grãos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Valor Médio</span>
+                                <span class="spec-value">$173.00</span>
+                            </div>
+                        </div>
+                        <button class="btn-details">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <!-- Card 2: New Holland -->
+                <div class="tractor-card">
+                    <div class="brand-logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/New_Holland_logo.svg/320px-New_Holland_logo.svg.png" alt="New Holland" class="brand-logo">
+                    </div>
+                    <div class="tractor-image-container">
+                        <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=400&q=80" alt="New Holland T6.130" class="tractor-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="model-title">T6.130 - 130 cv</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Potência</span>
+                                <span class="spec-value">130 cv</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Transmissão</span>
+                                <span class="spec-value">Grãos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Valor Médio</span>
+                                <span class="spec-value">$175.00</span>
+                            </div>
+                        </div>
+                        <button class="btn-details">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Valtra -->
+                <div class="tractor-card">
+                    <div class="brand-logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Valtra_logo.svg/320px-Valtra_logo.svg.png" alt="Valtra" class="brand-logo">
+                    </div>
+                    <div class="tractor-image-container">
+                        <img src="https://images.unsplash.com/photo-1562684848-17522b376bde?auto=format&fit=crop&w=400&q=80" alt="Valtra A114" class="tractor-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="model-title">A114 - 110 cv</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Potência</span>
+                                <span class="spec-value">110 cv</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Transmissão</span>
+                                <span class="spec-value">Grãos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Valor Médio</span>
+                                <span class="spec-value">$115.00</span>
+                            </div>
+                        </div>
+                        <button class="btn-details">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Massey Ferguson -->
+                <div class="tractor-card">
+                    <div class="brand-logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Massey_Ferguson_logo.svg/320px-Massey_Ferguson_logo.svg.png" alt="Massey Ferguson" class="brand-logo">
+                    </div>
+                    <div class="tractor-image-container">
+                        <img src="https://images.unsplash.com/photo-1592861956559-35758837c16c?auto=format&fit=crop&w=400&q=80" alt="Massey Ferguson MF 6713" class="tractor-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="model-title">MF 6713 - 130 cv</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Potência</span>
+                                <span class="spec-value">671 cv</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Transmissão</span>
+                                <span class="spec-value">Grãos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Valor Médio</span>
+                                <span class="spec-value">$190.00</span>
+                            </div>
+                        </div>
+                        <button class="btn-details">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <!-- Card 5: Case IH -->
+                <div class="tractor-card">
+                    <div class="brand-logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Case_IH_logo.svg/320px-Case_IH_logo.svg.png" alt="Case IH" class="brand-logo">
+                    </div>
+                    <div class="tractor-image-container">
+                        <img src="https://images.unsplash.com/photo-1530267981375-f0de937f5f13?auto=format&fit=crop&w=400&q=80" alt="Case IH Farmall 110" class="tractor-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="model-title">Farmall 110 - 110 cv</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Potência</span>
+                                <span class="spec-value">110 cv</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Transmissão</span>
+                                <span class="spec-value">Grãos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Valor Médio</span>
+                                <span class="spec-value">$170.00</span>
+                            </div>
+                        </div>
+                        <button class="btn-details">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <!-- Card 6: Mahindra -->
+                <div class="tractor-card">
+                    <div class="brand-logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mahindra_Rise_logo.svg/320px-Mahindra_Rise_logo.svg.png" alt="Mahindra" class="brand-logo">
+                    </div>
+                    <div class="tractor-image-container">
+                        <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=400&q=80" alt="Mahindra 9110" class="tractor-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="model-title">9110 - 110 cv</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <span class="spec-label">Potência</span>
+                                <span class="spec-value">910 cv</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Transmissão</span>
+                                <span class="spec-value">Grãos</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Valor Médio</span>
+                                <span class="spec-value">$175.00</span>
+                            </div>
+                        </div>
+                        <button class="btn-details">Ver Detalhes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="footer-nav">
+                    <a href="#">Início</a>
+                    <a href="#">Como Funciona</a>
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="footer-site">
+                    <span>Site: TratorCerto</span>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="copyright">
+                    © 2024 TratorCerto
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
